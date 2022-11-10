@@ -1,1 +1,42 @@
 **********Ansible commands*****************
+Before running any commands in ansible we have to check SSH connect is there or not.
+
+sudo amazon-linux-extras install ansible2
+
+sudo yum install ansible   (Yum is used for linux/redhat  family and apt is used for ubantu ) 
+
+Ansible Utilities:
+
+ansible
+ansible-config
+ansible-console
+ansible-doc
+ansible-galaxy
+ansible-inventory
+ansible-playbook
+ansible-pull
+ansible-vault
+
+1) ansible prodappservers -m ping
+2) ansible 172.31.21.213 -m ping   -- ping 
+3) ansible prodappservers -m copy/fetch -a 'src=/home/ec2-user/abc.txt dest=/home/ec2-user/'
+4) create a file/ remove a file in remote server ; ansible prodappservers -m command -a ' touch /home/abxxx.txgg' --become
+5) run the .sh file in the remote server :  ansible prodappservers -m command -a 'sh script.sh' --become
+6) install the software like java and python version in remote server : 
+7) check the setup of the remote server (like which os it is and how many core cpu is contains
+8) start the service in remote server.
+9) ansible --help --it will give more options.
+
+Define and run a single task ‘playbook’ against a set of hosts
+
+
+
+
+
+
+
+  
+
+
+
+
